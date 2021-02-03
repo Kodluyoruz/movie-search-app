@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../styles/Card.css';
 const Card = ({ image, title, year }) => {
   return (
     <div className='card'>

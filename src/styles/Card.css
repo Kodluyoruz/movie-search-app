@@ -1,0 +1,39 @@
+.card {
+    position: relative;
+    width: 350px;
+    height: 600px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    border-left: 1px solid black;
+    -webkit-box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.75);
+}
+.card .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: yellow;
+}
+.card img {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 500px;
+}
+.card .info {
+    display: flex;
+    height: 95px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.card .info .title {
+    line-height: 25px;
+    font-size: 24px;
+    text-align: center;
+}
+.card .info .year {
+    line-height: 25px;
+}
