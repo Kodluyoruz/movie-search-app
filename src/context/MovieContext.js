@@ -13,6 +13,7 @@ const MovieApp = ({ children }) => {
     );
     const data = await response.data;
     setMovies(data);
+    console.log(movies);
   };
   useEffect(() => {
     fetchMovies(search);
