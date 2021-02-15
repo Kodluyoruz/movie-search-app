@@ -5,13 +5,13 @@ export const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Home />,
+    component: <Home />,
     title: 'Home',
   },
   {
     path: '/favorite',
     exact: false,
-    component: () => <Favorite />,
+    component: <Favorite />,
     title: 'Favorite',
   },
 ];

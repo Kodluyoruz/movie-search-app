@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
-import Input from "../components/Input";
-import { MovieContext } from "../context/MovieContext";
-import Card from "../components/Card";
-import "../styles/Layout.css";
+import React, { useContext } from 'react';
+
+import Input from '../components/Input';
+import { MovieContext } from '../context/MovieContext';
+import Card from '../components/Card';
+import '../styles/Home.css';
+
 const Home = () => {
   const { setSearch, movies, favoriteHandler } = useContext(MovieContext);
   const handleSearch = (e) => {
@@ -10,12 +12,12 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className='home-container'>
       <Input handleSearch={handleSearch} />
       {/* conditional rendering */}
-      {movies?.Search?.length >0  ? (
-        <div className="layout">
-          {movies?.Search?.map((movie) => {
+      {movies?.length > 0 ? (
+        <div className='movies'>
+          {movies?.map((movie) => {
             return (
               <Card
                 key={movie.imdbID}
@@ -29,7 +31,10 @@ const Home = () => {
           })}
         </div>
       ) : (
-        <div className="search_warning">Search movies!!</div>
+        <div className='search-warning'>
+          <p>Search a movie!</p>
+          <p>i.e. Harry Potter</p>
+        </div>
       )}
     </div>
   );

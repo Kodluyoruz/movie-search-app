@@ -1,13 +1,23 @@
 import React from 'react';
+
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+import { routes } from './config/Router';
+
 import './App.css';
-import Header from './components/Header';
-import Input from './components/Input';
+import Layout from './components/Layout';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-    </div>
+    <Router>
+      <Switch>
+        {routes.map((route) => (
+          <Route exact={route.exact} path={route.path} key={route.title}>
+            <Layout>{route.component}</Layout>
+          </Route>
+        ))}
+      </Switch>
+    </Router>
   );
 }
 

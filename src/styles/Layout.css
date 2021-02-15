@@ -1,7 +1,4 @@
-.layout{
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+.container {
+  width: 1200px;
+  margin: 30px auto 0;
 }

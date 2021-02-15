@@ -1,17 +1,23 @@
 nav {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eeee;
+}
 
-}
-.nav-item{
+.logo {
   display: flex;
-  width: 90%;
- justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #74b9ff;
+  border-radius: 5px;
+  color: #74b9ff;
 }
-.nav-links {
-  
+
+.nav-item {
+  display: flex;
+  justify-content: center;
 }
 
 li,
@@ -24,15 +30,19 @@ ul {
   padding: 0;
 }
 
-li {
-  list-style-type: none;
-}
-
-li :link {
+.link {
   text-decoration: none;
   padding: 10px 5px;
+  background-color: #74b9ff;
+  border-radius: 5px;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+}
+
+.link:hover {
+  background-color: #0984e3;
 }
 
 li:not(:last-child) :link {
-  margin-right: 15px;
+  margin-right: 25px;
 }
