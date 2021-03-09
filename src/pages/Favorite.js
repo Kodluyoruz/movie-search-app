@@ -22,7 +22,7 @@ const Favorite = () => {
           ))}
         </div>
       ) : (
-        <div className='favorite_warning'> There is no Favorite Movie </div>
+        <div className='favorite_warning'> There is no favorite movie.</div>
       )}
     </>
   );

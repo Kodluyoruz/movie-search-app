@@ -6,6 +6,7 @@ const MovieApp = ({ children }) => {
   const [favorite, setFavorite] = useState([]);
   const [movies, setMovies] = useState();
   const [search, setSearch] = useState('');
+  const [selectedMovie, setSelectedMovie] = useState('');
 
   const fetchMovies = async (searchValue) => {
     const response = await axios(
@@ -36,6 +37,15 @@ const MovieApp = ({ children }) => {
       addFavoriteMovie(movie);
     }
   };
+
+  const showDetail = async (id) => {
+    const response = await axios(
+      `https://www.omdbapi.com/?apikey=b85e1d74&i=${id}`
+    );
+    const data = response.data;
+    setSelectedMovie(data);
+  };
+
   useEffect(() => {
     fetchMovies(search);
   }, [search]);
@@ -47,6 +57,8 @@ const MovieApp = ({ children }) => {
         movies,
         favorite,
         favoriteHandler,
+        showDetail,
+        selectedMovie,
       }}
     >
       {children}

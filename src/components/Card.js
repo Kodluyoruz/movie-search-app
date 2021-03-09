@@ -1,15 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import noImage from '../utils/no-image-available.png';
 import '../styles/Card.css';
 
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 
-const Card = ({ image, title, year, onClick, isFavorite }) => {
+const Card = ({ image, title, year, addFavorite, isFavorite }) => {
   return (
     <div className='card'>
-      <div className='icon' onClick={onClick}>
+      <div className='icon' onClick={addFavorite}>
         {isFavorite ? (
           <i>
             <FontAwesomeIcon icon={faStarSolid} color='##FFF700' size='2x' />
@@ -20,7 +21,12 @@ const Card = ({ image, title, year, onClick, isFavorite }) => {
           </i>
         )}
       </div>
-      <img src={image} alt={title} />
+      {image === 'N/A' ? (
+        <img src={noImage} />
+      ) : (
+        <img src={image} alt={title} />
+      )}
+
       <div className='info'>
         <span className='title'>{title}</span>
         <span className='year'>{year}</span>

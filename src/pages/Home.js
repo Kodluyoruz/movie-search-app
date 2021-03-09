@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import Input from '../components/Input';
 import { MovieContext } from '../context/MovieContext';
 import Card from '../components/Card';
@@ -19,14 +21,20 @@ const Home = () => {
         <div className='movies'>
           {movies?.map((movie) => {
             return (
-              <Card
+              <Link
+                to={`movies/${movie.imdbID}`}
+                className='text-link'
                 key={movie.imdbID}
-                image={movie.Poster}
-                title={movie.Title}
-                year={movie.Year}
-                onClick={() => favoriteHandler(movie)}
-                isFavorite={movie.isFavorite}
-              />
+              >
+                <Card
+                  key={movie.imdbID}
+                  image={movie.Poster}
+                  title={movie.Title}
+                  year={movie.Year}
+                  addFavorite={() => favoriteHandler(movie)}
+                  isFavorite={movie.isFavorite}
+                />
+              </Link>
             );
           })}
         </div>

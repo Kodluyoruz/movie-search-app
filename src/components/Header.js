@@ -13,13 +13,17 @@ const Header = () => {
         <div className='logo'>MovieApp</div>
         <div className='nav-item'>
           <div className='nav-links'>
-            {routes.map((route) => (
-              <li key={route.title}>
-                <Link to={route.path} className='link'>
-                  {route.title}
-                </Link>
-              </li>
-            ))}
+            {routes.map((route) => {
+              if (route.isHeaderElement) {
+                return (
+                  <li key={route.title}>
+                    <Link to={route.path} className='link'>
+                      {route.title}
+                    </Link>
+                  </li>
+                );
+              }
+            })}
           </div>
         </div>
       </nav>

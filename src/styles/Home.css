@@ -14,3 +14,8 @@
   margin: 20px 0;
   color: #0984e3;
 }
+
+.text-link {
+  text-decoration: none;
+  color: inherit;
+}
