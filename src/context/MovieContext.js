@@ -5,7 +5,7 @@ export const MovieContext = createContext();
 const API_KEY = '';
 
 const MovieApp = ({ children }) => {
-  const [favorite, setFavorite] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   const [movies, setMovies] = useState();
   const [search, setSearch] = useState('');
   const [selectedMovie, setSelectedMovie] = useState('');
@@ -20,21 +20,21 @@ const MovieApp = ({ children }) => {
 
   const removeFavoriteMovie = (movie) => {
     movie.isFavorite = false;
-    const newFavoriteList = favorite.filter(
+    const newFavoriteList = favorites.filter(
       (fav) => fav.imdbID !== movie.imdbID
     );
-    setFavorite(newFavoriteList);
+    setFavorites(newFavoriteList);
   };
 
   const addFavoriteMovie = (movie) => {
     movie.isFavorite = true;
-    const newFavoriteList = [...favorite, movie];
-    setFavorite(newFavoriteList);
+    const newFavoriteList = [...favorites, movie];
+    setFavorites(newFavoriteList);
   };
 
   const favoriteHandler = (movie, e) => {
     e.preventDefault();
-    if (favorite.includes(movie)) {
+    if (favorites.includes(movie)) {
       removeFavoriteMovie(movie);
     } else {
       addFavoriteMovie(movie);
@@ -58,7 +58,7 @@ const MovieApp = ({ children }) => {
       value={{
         setSearch,
         movies,
-        favorite,
+        favorites,
         favoriteHandler,
         showDetail,
         selectedMovie,

@@ -4,13 +4,13 @@ import Card from '../components/Card';
 import '../styles/Favorite.css';
 
 const Favorite = () => {
-  const { favorite, favoriteHandler } = useContext(MovieContext);
+  const { favorites, favoriteHandler } = useContext(MovieContext);
 
   return (
     <>
-      {favorite?.length > 0 ? (
+      {favorites?.length > 0 ? (
         <div className='favorites'>
-          {favorite.map((movie) => (
+          {favorites.map((movie) => (
             <Card
               key={movie.imdbID}
               image={movie.Poster}
