@@ -7,11 +7,11 @@ import noImage from '../utils/no-image-available.png';
 import '../styles/Detail.css';
 
 const Detail = () => {
-  const { id } = useParams();
+  // React Router'daki dinamik URL kısmını almalıyız (useParams)
   const { showDetail, selectedMovie } = useContext(MovieContext);
   useEffect(() => {
-    showDetail(id);
-  }, [id]);
+    showDetail('tt1201607'); // useParams ile alınan film id'sini kullanınız. 
+  }, []);
 
   return (
     <div className='detail-container'>
