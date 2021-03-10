@@ -6,6 +6,14 @@ Bu ödevde OMDb API kullanarak film araması yapabilme ve filmleri favorilere ek
   <img src="movie-search-app.png" alt="Movie Search"/>
 </p>
 
+<p align="center">
+  <img src="favorites.png" alt="Favorites"/>
+</p>
+
+<p align="center">
+  <img src="detail.png" alt="Detail"/>
+</p>
+
 ### Proje Nasıl Çalıştırılır
 
 - Projeyi fork'ladıktan ya da indirdikten sonra projenin bulunduğu klasörde "npm install" komutu ile gerekli paketlerin yüklenmesi gerekiyor.
