@@ -2,6 +2,8 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 export const MovieContext = createContext();
 
+const API_KEY = '';
+
 const MovieApp = ({ children }) => {
   const [favorite, setFavorite] = useState([]);
   const [movies, setMovies] = useState();
@@ -10,7 +12,7 @@ const MovieApp = ({ children }) => {
 
   const fetchMovies = async (searchValue) => {
     const response = await axios(
-      `https://www.omdbapi.com/?apikey=b85e1d74&s=${searchValue}`
+      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchValue}`
     );
     const data = response.data;
     setMovies(data.Search);
@@ -41,7 +43,7 @@ const MovieApp = ({ children }) => {
 
   const showDetail = async (id) => {
     const response = await axios(
-      `https://www.omdbapi.com/?apikey=b85e1d74&i=${id}`
+      `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
     );
     const data = response.data;
     setSelectedMovie(data);
