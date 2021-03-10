@@ -14,7 +14,7 @@ export const routes = [
     path: '/favorite',
     exact: false,
     component: <Favorite />,
-    title: 'Favorite',
+    title: 'Favorites',
     isHeaderElement: true,
   },
   {
