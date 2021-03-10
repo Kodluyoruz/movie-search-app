@@ -33,9 +33,9 @@ Bu projede filmler ile alakalı anahtar kelimeyi arama kutucuğuna yazdıktan so
 
 ### Yapılacaklar
 
-- Router.js'de routes içine favorite route'u için config objesi oluşturun. (Hazır olan home route objesine benzer şekilde)
+- Router.js'de routes içine favorite route'u için config objesi oluşturunuzu. (Hazır olan home route objesine benzer şekilde)
 - Film detay sayfasını görüntülemek için Home page içinde bulunan Link component'inde gerekli olan film id'sine göre dinamik routing işlemini gerçekleştiriniz.
 - Home sayfasından gönderilen film id'sini Detail sayfasında yakalayabilmek için React Router'ın useParams fonksiyonunu kullanınız.
 
 ### NOT
-- Dinamik routing ödev olarak beklendiği için her film için sabit id'li bir film detay sayfası görüntülenmektedir. Görevler tamamlandıktan sonra projeniz dinamik bir routing yapısına sahip olacaktır. 
+- Dinamik routing ödev olarak beklendiği için her film için sabit id'li bir film detay sayfası görüntülenmektedir. Görevler tamamlandıktan sonra dinamik bir routing yapısı olacaktır. 
