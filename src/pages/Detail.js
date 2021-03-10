@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { MovieContext } from '../context/MovieContext';
 
+import noImage from '../utils/no-image-available.png';
 import '../styles/Detail.css';
 
 const Detail = () => {
@@ -15,7 +16,11 @@ const Detail = () => {
   return (
     <div className='detail-container'>
       <div className='poster'>
-        <img src={selectedMovie.Poster} alt={selectedMovie.Title} />
+        {selectedMovie.Poster === 'N/A' ? (
+          <img src={noImage} alt={selectedMovie.Title} />
+        ) : (
+          <img src={selectedMovie.Poster} alt={selectedMovie.Title} />
+        )}
       </div>
       <div className='info'>
         <div className='field'>

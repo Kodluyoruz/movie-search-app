@@ -22,7 +22,7 @@ const Card = ({ image, title, year, addFavorite, isFavorite }) => {
         )}
       </div>
       {image === 'N/A' ? (
-        <img src={noImage} />
+        <img src={noImage} alt={title} />
       ) : (
         <img src={image} alt={title} />
       )}

@@ -16,7 +16,7 @@ const Favorite = () => {
               image={movie.Poster}
               title={movie.Title}
               year={movie.Year}
-              onClick={() => favoriteHandler(movie)}
+              addFavorite={(e) => favoriteHandler(movie, e)}
               isFavorite={movie.isFavorite}
             />
           ))}

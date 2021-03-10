@@ -31,7 +31,7 @@ const Home = () => {
                   image={movie.Poster}
                   title={movie.Title}
                   year={movie.Year}
-                  addFavorite={() => favoriteHandler(movie)}
+                  addFavorite={(e) => favoriteHandler(movie, e)}
                   isFavorite={movie.isFavorite}
                 />
               </Link>

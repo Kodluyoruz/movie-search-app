@@ -30,7 +30,8 @@ const MovieApp = ({ children }) => {
     setFavorite(newFavoriteList);
   };
 
-  const favoriteHandler = (movie) => {
+  const favoriteHandler = (movie, e) => {
+    e.preventDefault();
     if (favorite.includes(movie)) {
       removeFavoriteMovie(movie);
     } else {
