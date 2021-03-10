@@ -8,7 +8,7 @@ const Favorite = () => {
 
   return (
     <>
-      {favorite?.length > 0 ? (
+      {favorite?.length ? (
         <div className='favorites'>
           {favorite.map((movie) => (
             <Card
